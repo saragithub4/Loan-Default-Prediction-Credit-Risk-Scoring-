@@ -188,8 +188,26 @@ The complete dataset is large, so the raw CSV file is not included in this repos
 
 This repository is intended for educational, analytical, and portfolio purposes. The analysis does not constitute financial advice or an actual lending decision system.
 
+
+## Data Pre-processing steps:
+1.Data Loading: Imported the compressed CSV dataset into a Pandas DataFrame using Python.
+
+2.Data Understanding: Examined the dataset dimensions, column names, data types, statistical summaries, and overall structure using head(), info(), describe(), and other Pandas functions.
+
+3.Column Selection: Selected relevant features related to loan characteristics, borrower income, employment, credit history, credit scores, loan purpose, and repayment status. Unnecessary and irrelevant columns were excluded to reduce dimensionality.
+
+4.Duplicate Removal: Identified and removed duplicate records to maintain data consistency and avoid repeated loan entries.
+
+5.Missing Value Treatment: Identified missing values using Pandas and calculated their percentage across columns. Columns containing excessive missing values were reviewed and removed where appropriate. Missing numerical values were handled using median imputation, while missing categorical values were replaced with an 'Unknown' category.
+
+6.Column Name Standardization: Converted column names into lowercase and replaced spaces with underscores to maintain consistent naming conventions.
+
+7.Data Type Conversion: Loan term and employment length were converted into numerical values.
+
+8.Inconsistent and Invalid Value Treatment: Examined numerical variables for negative, zero, and other invalid values. 
+
+9.Date Formatting: Converted loan issue dates and earliest credit line dates into datetime formats. Additional date-related features, including loan issue year, issue month, and credit history age, were created for further analysis.
+
 ## 👩‍💻 Project Status
 
 **Status:** In Progress
-
-The project covers data understanding, preprocessing, exploratory analysis, and the investigation of loan default risk. Additional stages, including predictive modeling and model evaluation, can be incorporated as the analysis progresses.
